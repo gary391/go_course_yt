@@ -1,7 +1,5 @@
 package main
 
-
-
 func main() {
 
 	// assign a variable and
@@ -30,24 +28,30 @@ func main() {
 	// printState()
 	// fmt.Println(newCard())
 	// Slice of type string and not Slice of trings!!!
-	cards := deck{
-		"Ace of Hearts", newCard()}
-		// Append function creates a new slice instead of modifying the existing one.
-	cards = append(cards, "Six of Spades") 
+	// cards := deck{
+	// 	"Ace of Hearts", newCard()}
+	// Append function creates a new slice instead of modifying the existing one.
+	// cards = append(cards, "Six of Spades")
 	// fmt.Println(cards)
 	// Iterate over the slice
 	// The reason we are using the := because for each iteration we are
-	// initializing/assigning and throwing away the previous values. 
+	// initializing/assigning and throwing away the previous values.
 	// every variable we declare in the code must be used in our code.
 	// for i, card:= range cards {
 	// 	fmt.Println(i,card)
 	// }
-	cards.print()
+
+	cards := newDeck()
+	// cards.print()
+	hand, remaingDecks := deal(cards, 5)
+	hand.print()
+	remaingDecks.print()
+
 }
 
 // Function should have a return type.
 // What data type we are going to return from the function
 
-func newCard() string {
-	return "Five of Diamonds"
-}
+// func newCard() string {
+// 	return "Five of Diamonds"
+// }
