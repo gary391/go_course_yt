@@ -41,11 +41,25 @@ func main() {
 	// 	fmt.Println(i,card)
 	// }
 
-	cards := newDeck()
+	// cards := newDeck()
+	// // cards.print()
+	// hand, remaingDecks := deal(cards, 5)
+	// hand.print()
+	// remaingDecks.print()
+
+	// 	greeting := "Hi there!"
+	// 	//Type conversation
+	// 	fmt.Println([]byte(greeting))
+	// }
+	// cards:= newDeck()
+	// fmt.Println(cards.saveToFile("my_cards"))
+	// cards := newDeckFromFile("my")
 	// cards.print()
-	hand, remaingDecks := deal(cards, 5)
-	hand.print()
-	remaingDecks.print()
+	cards := newDeck()
+	cards.print()
+
+	cards.shuffle()
+	cards.print()
 
 }
 
